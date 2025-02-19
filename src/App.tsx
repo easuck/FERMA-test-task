@@ -18,6 +18,10 @@ const App = () => {
             <TaskList classname='mt-20'>
                 <Task text='найти работу'/>
                 <Task text='найти работу'/>
+                <Task text='найти работу'/>
+                <Task text='найти работу'/>
+                <Task text='найти работу'/>
+                <Task text='найти работу'/>
             </TaskList>
         </div>
     );
