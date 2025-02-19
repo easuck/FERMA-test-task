@@ -1,0 +1,28 @@
+.TagChip{
+  border-radius: 10px;
+  padding: 10px 15px;
+  cursor: pointer;
+  &_all{
+    color: var(--default);
+    border: 2px solid var(--default);
+    &:hover{
+      color: #FFF;
+      background: var(--default-secondary);
+    }
+
+  }
+  &_complete{
+    color: var(--active);
+    border: 2px solid var(--active);
+    &:hover{
+      background: var(--active-secondary);
+    }
+  }
+  &_incomplete{
+    color: var(--delete);
+    border: 2px solid var(--delete);
+    &:hover{
+      background: var(--delete-secondary);
+    }
+  }
+}
