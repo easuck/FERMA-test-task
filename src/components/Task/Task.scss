@@ -1,0 +1,28 @@
+.Task{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  border-radius: 21px;
+  padding: 20px;
+  box-shadow: 0 4px 17.8px 0 rgba(0, 0, 0, 0.1);
+  &_content{
+    display: flex;
+    gap: 20px;
+    &_status{
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      border: 2px solid #A4A4A4;
+    }
+  }
+  &_icons{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+    & > img{
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
