@@ -2,6 +2,16 @@
   border-radius: 10px;
   padding: 10px 15px;
   cursor: pointer;
+  white-space: nowrap;
+  @media(max-width: 650px){
+    padding: 8px 15px;
+  }
+  & > h3{
+    font-size: 16px;
+    @media(max-width: 650px){
+      font-size: 14px;
+    }
+  }
   &_all{
     color: var(--default);
     border: 2px solid var(--default);
@@ -9,7 +19,6 @@
       color: #FFF;
       background: var(--default-secondary);
     }
-
   }
   &_complete{
     color: var(--active);

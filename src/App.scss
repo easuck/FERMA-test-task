@@ -6,5 +6,12 @@
   padding: 50px;
   & > h1{
     color: var(--default);
+    font-size: 96px;
+    @media (max-width: 650px){
+      font-size: 24px;
+    }
+  }
+  @media (max-width: 650px){
+    padding: 20px;
   }
 }

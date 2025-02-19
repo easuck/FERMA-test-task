@@ -7,7 +7,7 @@ type Props = {
 const TaskBar = ({classname}: Props) => {
     return (
         <div className={`TaskBar ${classname}`}>
-            <input className='TaskBar_input text-24 regular'
+            <input className='TaskBar_input regular'
                    placeholder='Создать задачу'
             />
             <img src='/AddIcon.png'

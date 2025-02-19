@@ -8,7 +8,7 @@ import TagChip, {TagType} from "./components/TagChip/TagChip.tsx";
 const App = () => {
     return (
         <div className='mainPage'>
-            <h1 className='text-96 bold'>Список дел</h1>
+            <h1 className='bold'>Список дел</h1>
             <TaskBar classname='mt-40'/>
             <TagBar classname='mt-40'>
                 <TagChip name={TagType.ALL}/>
