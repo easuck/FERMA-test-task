@@ -7,10 +7,10 @@ type Props = {
 const Task = ({text}: Props) => {
     return (
         <div className='Task'>
-            <h2>Сегодня</h2>
+            <h2 className='text-20 bold'>Сегодня</h2>
             <div className='Task_content'>
                 <div className='Task_content_status'/>
-                <div className='Task_content_text'>{text}</div>
+                <h2 className='text-16 regular'>{text}</h2>
             </div>
             <div className='Task_icons'>
                 <img src='/DeleteIcon.png' alt='delete'/>

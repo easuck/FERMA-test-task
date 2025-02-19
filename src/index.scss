@@ -4,6 +4,7 @@
 }
 html{
   min-height: 100vh;
+  font-family: Muller, sans-serif;
 }
 :root{
   --default: #30324B;
@@ -12,4 +13,30 @@ html{
   --default-secondary: #575A84;
   --active-secondary: #CEFF9D;
   --delete-secondary: #FFB8B8;
+}
+@font-face {
+  font-family: Muller;
+  src: url('./fonts/Muller-Trial-Bold.ttf')
+}
+@font-face {
+  font-family: Muller;
+  src: url('./fonts/Muller-Trial-Regular.ttf');
+}
+$fontSizes: 16, 20, 24, 96;
+@each $i in $fontSizes{
+  .text-#{$i}{
+    font-size: $i + px;
+  }
+}
+$margin: 10, 20, 40;
+@each $i in $margin{
+  .mt-#{$i}{
+    margin-top: $i + px;
+  }
+}
+.regular{
+  font-weight: 400;
+}
+.bold{
+  font-weight: 700;
 }

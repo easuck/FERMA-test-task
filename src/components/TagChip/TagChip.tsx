@@ -19,7 +19,7 @@ const tagStyles = {
 const TagChip = ({name}: Props) => {
     return (
         <div className={`TagChip ${tagStyles[name]}`}>
-            <h3>{name}</h3>
+            <h3 className='text-16 regular'>{name}</h3>
         </div>
     );
 };

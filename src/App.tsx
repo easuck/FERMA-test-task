@@ -8,14 +8,14 @@ import TagChip, {TagType} from "./components/TagChip/TagChip.tsx";
 const App = () => {
     return (
         <div className='mainPage'>
-            <h1>Список дел</h1>
-            <TaskBar/>
-            <TagBar>
+            <h1 className='text-96 bold'>Список дел</h1>
+            <TaskBar classname='mt-40'/>
+            <TagBar classname='mt-40'>
                 <TagChip name={TagType.ALL}/>
                 <TagChip name={TagType.COMPLETE}/>
                 <TagChip name={TagType.INCOMPLETE}/>
             </TagBar>
-            <TaskList>
+            <TaskList classname='mt-20'>
                 <Task text='найти работу'/>
                 <Task text='найти работу'/>
             </TaskList>

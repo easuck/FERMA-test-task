@@ -1,8 +1,13 @@
 import './TaskList.scss'
 
-const TaskList = ({children}) => {
+type Props = {
+    classname?: string;
+    children: React.ReactNode;
+}
+
+const TaskList = ({children, classname}: Props) => {
     return (
-        <div className='TaskList'>
+        <div className={`TaskList ${classname}`}>
             {children}
         </div>
     );

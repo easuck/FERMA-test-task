@@ -1,8 +1,13 @@
 import './TagBar.scss'
 
-const TagBar = ({children}) => {
+type Props = {
+    classname?: string;
+    children: React.ReactNode;
+}
+
+const TagBar = ({children, classname}: Props) => {
     return (
-        <div className='TagBar'>
+        <div className={`TagBar ${classname}`}>
             {children}
         </div>
     );
