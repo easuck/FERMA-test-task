@@ -2,8 +2,12 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ITodo} from "../models/ITodo.ts";
 
 const initialState = {
-    todos: []
+    todos: JSON.parse(localStorage.getItem('todos')) || []
 }
+
+const saveTodos = (todos) => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+};
 
 const todoSlice = createSlice({
     name: 'todos',
@@ -11,18 +15,18 @@ const todoSlice = createSlice({
     reducers: {
         addTodo: (state, action: PayloadAction<ITodo>) => {
             state.todos.push(action.payload);
+            saveTodos(state.todos);
         },
         removeTodo: (state, action: PayloadAction<string>) => {
-            state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+            state.todos = state.todos.filter((todo) => todo.id != action.payload);
+            saveTodos(state.todos);
         },
         editTodo: (state, action: PayloadAction<ITodo>) => {
-            state.todos = state.todos.map((todo) => {
-                return todo.id == action.payload.id ?
-                    {
-                        ...todo,
-                        text: action.payload.text
-                    } : todo;
-            })
+            const todo = state.todos.find(todo => todo.id == action.payload.id);
+            if (todo) {
+                todo.text = action.payload.text;
+                saveTodos(state.todos);
+            }
         }
     }
 });

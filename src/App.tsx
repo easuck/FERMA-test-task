@@ -18,7 +18,7 @@ const App = () => {
                 <TagChip name={TagType.INCOMPLETE}/>
             </TagBar>
             <TaskList classname='mt-20'>
-                {todos.map(todo => {
+                {todos?.map(todo => {
                     return <Task todo={todo}/>
                 })}
             </TaskList>
