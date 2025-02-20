@@ -19,12 +19,21 @@
       color: #FFF;
       background: var(--default-secondary);
     }
+    &_active{
+      background: var(--default);
+      color: #FFF;
+    }
   }
   &_complete{
     color: var(--active);
     border: 2px solid var(--active);
     &:hover{
       background: var(--active-secondary);
+      color: var(--active);
+    }
+    &_active{
+      background: var(--active);
+      color: #FFF;
     }
   }
   &_incomplete{
@@ -32,6 +41,11 @@
     border: 2px solid var(--delete);
     &:hover{
       background: var(--delete-secondary);
+      color: var(--delete);
+    }
+    &_active{
+      background: var(--delete);
+      color: #FFF;
     }
   }
 }

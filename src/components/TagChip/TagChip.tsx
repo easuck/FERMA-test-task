@@ -1,4 +1,5 @@
 import './TagChip.scss'
+import {SetStateAction} from "react";
 
 
 export enum TagType{
@@ -8,6 +9,8 @@ export enum TagType{
 }
 type Props = {
     name: TagType;
+    activeTag: TagType;
+    setActiveTag: React.Dispatch<SetStateAction<TagType>>
 }
 
 const tagStyles = {
@@ -16,9 +19,11 @@ const tagStyles = {
     'Не выполнено': 'TagChip_incomplete'
 }
 
-const TagChip = ({name}: Props) => {
+const TagChip = ({name, activeTag, setActiveTag}: Props) => {
     return (
-        <div className={`TagChip ${tagStyles[name]}`}>
+        <div className={`TagChip ${tagStyles[name]} ${activeTag == name && tagStyles[name] + '_active'}`}
+            onClick={() => (setActiveTag(name))}
+        >
             <h3 className='regular'>{name}</h3>
         </div>
     );
