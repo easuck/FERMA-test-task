@@ -4,8 +4,10 @@ import Task from "./components/Task/Task.tsx";
 import TaskList from "./components/TaskList/TaskList.tsx";
 import TagBar from "./components/TagBar/TagBar.tsx";
 import TagChip, {TagType} from "./components/TagChip/TagChip.tsx";
+import {useSelector} from "react-redux";
 
 const App = () => {
+    const todos = useSelector((state) => state.todos.todos);
     return (
         <div className='mainPage'>
             <h1 className='bold'>Список дел</h1>
@@ -16,12 +18,9 @@ const App = () => {
                 <TagChip name={TagType.INCOMPLETE}/>
             </TagBar>
             <TaskList classname='mt-20'>
-                <Task text='найти работу'/>
-                <Task text='найти работу'/>
-                <Task text='найти работу'/>
-                <Task text='найти работу'/>
-                <Task text='найти работу'/>
-                <Task text='найти работу'/>
+                {todos.map(todo => {
+                    return <Task todo={todo}/>
+                })}
             </TaskList>
         </div>
     );

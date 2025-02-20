@@ -23,6 +23,18 @@
     }
     & > h2{
       font-size: 16px;
+      flex: 1;
+      @media(max-width: 650px){
+        font-size: 14px;
+      }
+    }
+    & > input{
+      font-family: Muller, sans-serif;
+      flex: 1;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid var(--default);
       @media(max-width: 650px){
         font-size: 14px;
       }
@@ -35,6 +47,7 @@
     & > img{
       width: 24px;
       height: 24px;
+      cursor: pointer;
       @media(max-width: 650px){
         width: 20px;
         height: 20px;
